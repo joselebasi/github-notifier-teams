@@ -39,6 +39,10 @@ app.post('/webhook', bodyParser.json({ verify: verifySignature }), (req, res) =>
   res.status(200).end();
 });
 
+app.get('/', (req, res) => {
+  res.send('Version 1.0.0');
+});
+
 function sendTeamsNotification(pr) {
   // Lógica para enviar mensaje a Teams aquí
   // Ejemplo básico:
