@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 
 const app = express();
-const port = 3000;
+// Recomendacion de render: Usa variables de entorno para la configuración
+const port = process.env.PORT || 3000
 const GITHUB_SECRET = process.env.GITHUB_SECRET; // Configura tu secreto
 
 app.use(bodyParser.json());
