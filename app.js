@@ -41,6 +41,7 @@ app.post('/webhook', bodyParser.json({ verify: verifySignature }), (req, res) =>
 
 app.get('/', (req, res) => {
   res.send('Version 1.0.0');
+  console.log('Root path accessed');
 });
 
 function sendTeamsNotification(pr) {
